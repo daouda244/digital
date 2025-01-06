@@ -7,6 +7,54 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/*Designe des trois bloques vente , infographie et developement*/
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Style de l'image */
+.image-container img {
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Effet de rotation sur hover */
+.image-container:hover img {
+    transform: rotate(360deg);
+	opacity: 0.1;
+
+}
+
+.alt-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Afficher le texte alternatif sur hover */
+.image-container:hover .alt-text {
+    opacity: 1;
+}
+
+
+.image-container .alt-text {
+    visibility: hidden;
+}
+.image-container:hover .alt-text {
+    visibility: visible;
+}
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
